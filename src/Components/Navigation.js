@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import LogoImage from './LogoImage';
+import '../styles/Nav.css';
 
 const NavBar = () => {
   const activeLink = {

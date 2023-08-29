@@ -33,9 +33,9 @@ const missionsSlice = createSlice({
         const fetchedData = [];
         action.payload.forEach((mission) => {
           const data = {
-            mission_id: mission.mission_id,
-            mission_name: mission.mission_name,
-            mission_description: mission.description,
+            missionId: mission.mission_id,
+            missionName: mission.mission_name,
+            missionDescription: mission.description,
           };
           fetchedData.push(data);
         });

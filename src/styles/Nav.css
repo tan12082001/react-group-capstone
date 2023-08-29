@@ -1,0 +1,18 @@
+.logo-image {
+  width: 40px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  list-style: none;
+}
+
+.link a {
+  text-decoration: none;
+  color: rgb(51, 63, 233);
+}
