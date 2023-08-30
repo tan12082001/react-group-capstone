@@ -14,15 +14,18 @@
 }
 
 .not-a-member,
-.join-mission {
+.join-mission,
+.active-member,
+.leave-mission {
+  min-width: 115px;
   display: flex;
-  min-width: 110px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: normal;
+  justify-content: center;
 }
 
 .not-a-member {
@@ -32,9 +35,24 @@
   border-radius: 4px;
 }
 
+.active-member {
+  background: #20bbbd;
+  color: #fff;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
 .join-mission {
   background: none;
   padding: 0.6rem 0.3rem;
+  border-radius: 4px;
+}
+
+.leave-mission {
+  border: 1px solid red;
+  padding: 0.6rem 0.3rem;
+  background: none;
+  color: red;
   border-radius: 4px;
 }
 
