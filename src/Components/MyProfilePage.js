@@ -1,5 +1,12 @@
+import FilteredMissions from './MissionComponents/FilterMissions';
+import '../styles/Profile.css';
+
 const Profile = () => (
-  <h1>Profile page</h1>
+  <>
+    <div className="profile-outer">
+      <FilteredMissions />
+    </div>
+  </>
 );
 
 export default Profile;
