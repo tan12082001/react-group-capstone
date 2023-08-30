@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import LogoImage from './LogoImage';
+import '../styles/Nav.css';
 
 const NavBar = () => {
   const activeLink = {
@@ -7,9 +8,11 @@ const NavBar = () => {
   };
   return (
     <nav>
-      <LogoImage />
-      <h1>Space Traveler&apos;s Hub</h1>
-      <ul>
+      <div className="logo-name">
+        <LogoImage />
+        <h1>Space Traveler&apos;s Hub</h1>
+      </div>
+      <ul className="nav-links">
         <li className="link">
           <NavLink to="/" style={({ isActive }) => (isActive ? activeLink : undefined)}>Rockets</NavLink>
         </li>

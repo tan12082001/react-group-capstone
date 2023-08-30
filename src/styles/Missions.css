@@ -1,0 +1,43 @@
+.missions-outer {
+  padding: 2rem 1.6rem;
+}
+
+.missions-table {
+  border: 0.6px solid gray;
+}
+
+.mission-column,
+.each-mission td {
+  padding: 0.6rem 1rem;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.not-a-member,
+.join-mission {
+  display: flex;
+  min-width: 110px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.not-a-member {
+  background: rgb(89, 86, 86);
+  color: #fff;
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+.join-mission {
+  background: none;
+  padding: 0.6rem 0.3rem;
+  border-radius: 4px;
+}
+
+.each-mission:nth-child(odd) {
+  background-color: rgb(229, 228, 228);
+}
