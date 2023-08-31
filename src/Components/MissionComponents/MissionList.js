@@ -10,7 +10,7 @@ const MissionList = () => {
   const error = useSelector((state) => state.missions.error);
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissionsData());
-  }, []);
+  });
 
   if (isLoading) {
     return <span>Loading...</span>;
