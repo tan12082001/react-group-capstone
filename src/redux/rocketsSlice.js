@@ -41,7 +41,7 @@ export const rocketsSlice = createSlice({
   },
 });
 
-export const { fetchRocketsStart, fetchRocketsSuccess, fetchRocketsFailure } = rocketsSlice.actions;
+export const { fetchRocketsStart, fetchRocketsSuccess, fetchRocketsFailure, reserveRocket, cancelReservation } = rocketsSlice.actions;
 
 export const fetchRockets = () => async (dispatch) => {
   try {
@@ -53,6 +53,7 @@ export const fetchRockets = () => async (dispatch) => {
       name: rocket.name,
       type: rocket.type,
       flickr_images: rocket.flickr_images,
+      reserved: false,
     }));
 
     dispatch(fetchRocketsSuccess(rocketsData));
@@ -60,15 +61,5 @@ export const fetchRockets = () => async (dispatch) => {
     dispatch(fetchRocketsFailure(error.message));
   }
 };
-
-export const reserveRocket = (id) => ({
-  type: 'rockets/reserveRocket',
-  payload: id,
-});
-
-export const cancelReservation = (rocketId) => ({
-  type: 'CANCEL_RESERVATION',
-  payload: rocketId,
-});
 
 export default rocketsSlice.reducer;
