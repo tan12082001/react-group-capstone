@@ -1,16 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchMissionsData } from '../../redux/missions/missionsSlice';
+import { useSelector } from 'react-redux';
 import EachMission from './EachMission';
 
 const MissionList = () => {
-  const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions.missions);
   const isLoading = useSelector((state) => state.missions.isLoading);
   const error = useSelector((state) => state.missions.error);
-  useEffect(() => {
-    if (!missions.length) dispatch(fetchMissionsData());
-  });
 
   if (isLoading) {
     return <span>Loading...</span>;
