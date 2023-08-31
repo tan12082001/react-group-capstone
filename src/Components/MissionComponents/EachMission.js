@@ -24,8 +24,8 @@ const EachMission = ({ mission }) => {
     <tr className="each-mission">
       <td>{missionName}</td>
       <td>{missionDescription}</td>
-      <td><span className="not-a-member">NOT A MEMBER</span></td>
-      <td><button className="join-mission" type="button" onClick={checkStatus}>JOIN MISSION</button></td>
+      <td><span className={missionJoin ? 'active-member' : 'not-a-member'}>{missionJoin ? 'Active Memeber' : 'NOT A MEMBER'}</span></td>
+      <td><button className={missionJoin ? 'leave-mission' : 'join-mission'} type="button" onClick={checkStatus}>{missionJoin ? 'Leave Mission' : 'Join Mission'}</button></td>
     </tr>
   );
 };
