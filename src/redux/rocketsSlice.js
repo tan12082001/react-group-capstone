@@ -30,6 +30,14 @@ export const rocketsSlice = createSlice({
       });
       state.data = newState;
     },
+    cancelReservation: (state, action) => {
+      const id = action.payload;
+      const newState = state.data.map((rocket) => {
+        if (rocket.id !== id) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      state.data = newState;
+    },
   },
 });
 
@@ -58,11 +66,9 @@ export const reserveRocket = (id) => ({
   payload: id,
 });
 
-export const cancelReservation = (rocketId) => {
-  return {
-    type: 'CANCEL_RESERVATION',
-    payload: rocketId,
-  };
-};
+export const cancelReservation = (rocketId) => ({
+  type: 'CANCEL_RESERVATION',
+  payload: rocketId,
+});
 
 export default rocketsSlice.reducer;

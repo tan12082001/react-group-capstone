@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { reserveRocket } from '../../redux/rocketsSlice';
+import { reserveRocket, cancelReservation } from '../../redux/rocketsSlice';
 // import { fetchRockets } from '../../redux/rocketsSlice';
 
 const RocketList = () => {
@@ -25,7 +25,7 @@ const RocketList = () => {
             <h3>{rocket.name}</h3>
             <p>{rocket.type}</p>
             <button type="button" onClick={handleReserveRocket}>Reserve Rocket</button>
-            <button onClick={() => handleCancelReservation(rocketId)}>Cancel Reservation</button>
+            <button type="button" onClick={() => handleCancelReservation(rocket.id)}>Cancel Reservation</button>
           </div>
         </div>
       ))}
