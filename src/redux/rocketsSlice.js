@@ -52,12 +52,11 @@ export const fetchRockets = () => async (dispatch) => {
     const response = await axios.get('https://api.spacexdata.com/v3/rockets');
     const rocketsData = response.data.map((rocket) => ({
       id: rocket.id,
-      name: rocket.name,
-      type: rocket.type,
+      name: rocket.rocket_name,
+      type: rocket.description,
       flickr_images: rocket.flickr_images,
       reserved: false,
     }));
-
     dispatch(fetchRocketsSuccess(rocketsData));
   } catch (error) {
     dispatch(fetchRocketsFailure(error.message));
