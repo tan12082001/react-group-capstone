@@ -9,7 +9,7 @@
 .rocket-card {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .rocket-card img {
@@ -22,16 +22,37 @@
 }
 
 .rocket-details p {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
   padding-bottom: 15px;
   padding-top: 15px;
+}
+
+.reserved-badge {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(13, 125, 145, 0.818);
+  color: aliceblue;
+  border-radius: 5px;
+  width: 500px;
 }
 
 .rocket-details button {
   padding: 10px;
   min-width: 150px;
   font-size: 15px;
+  border: 2px solid;
+  border-radius: 7px;
+}
+
+.reserve-button {
   background-color: rgba(0, 68, 255, 0.684);
   color: aliceblue;
-  border-radius: 7px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reserve-button.clicked {
+  background-color: rgba(254, 254, 254, 0.666);
+  color: rgb(110, 110, 107);
+  border: 2px solid grey;
 }
