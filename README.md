@@ -59,7 +59,7 @@
 
 - **Missions component has `Join Mission` and `Leave Mission` features for a mission.**
 
--**MyProfile Page displays the currently joined missions and reserved rockets.**
+- **MyProfile Page displays the currently joined missions and reserved rockets.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
