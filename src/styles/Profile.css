@@ -6,17 +6,20 @@
   height: 100%;
 }
 
-.filtered-missions {
+.filtered-missions,
+.filtered-rockets {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.mission-names {
+.mission-names,
+.rocket-names {
   border: 1px solid gray;
 }
 
-.each-mission-name {
+.each-mission-name,
+.each-rocket-name {
   border-bottom: 1px solid gray;
   padding: 1.6rem;
 }
