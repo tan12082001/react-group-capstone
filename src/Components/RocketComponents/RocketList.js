@@ -8,16 +8,16 @@ const RocketList = () => {
 
   const dispatch = useDispatch();
 
-  // const handleReserveRocket = (rocketId) => {
-  //   dispatch(reserveRocket(rocketId));
-  // };
+  const handleReserveRocket = (id, reserved) => {
+    const onClick = () => {
+      if (reserved) {
+        dispatch(cancelReservation(id));
+      } else {
+        dispatch(reserveRocket(id));
+      }
+    };
 
-  const handleReserveRocket = (rocketId, reserved) => {
-    if (reserved) {
-      dispatch(reserveRocket(rocketId));
-    } else {
-      dispatch(cancelReservation(rocketId));
-    }
+    return onClick;
   };
 
   return (
@@ -28,10 +28,9 @@ const RocketList = () => {
           <div className="rocket-details">
             <h3>{rocket.name}</h3>
             <p>{rocket.type}</p>
-            <>
-              <span className="reserved-badge">{(rocket.reserved) ? 'Reserved' : undefined}</span>
-              <button className={rocket.reserved ? 'cancel-Reservation' : 'reserve-Rocket'} type="button" onClick={handleReserveRocket}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
-            </>
+
+            <span className="reserved-badge">{(rocket.reserved) ? 'Reserved' : undefined}</span>
+            <button type="button" className="reserve-button" onClick={handleReserveRocket(rocket.id, rocket.reserved)}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
       ))}
