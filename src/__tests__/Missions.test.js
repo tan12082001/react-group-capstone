@@ -7,13 +7,15 @@ import store from '../redux/store';
 import EachMission from '../Components/MissionComponents/EachMission';
 
 describe('Test for Missions', () => {
-  test('Case 1: Missions page loading', () => {
-    render(<Provider store={store}><Missions /></Provider>);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
-  });
-  test('Case 2: Missions page snapshot', () => {
+  test('Case 1: Missions page rendering', () => {
     const check = render(<Provider store={store}><Missions /></Provider>);
     expect(check).toMatchSnapshot();
+  });
+  test('Case 2: Missions page initial rendering', () => {
+    render(<Provider store={store}><Missions /></Provider>);
+    expect(screen.getByText('Mission')).toBeVisible();
+    expect(screen.getByText('Description')).toBeVisible();
+    expect(screen.getByText('Status')).toBeVisible();
   });
   test('Case 3: Test for data rendering', () => {
     const mission = {
