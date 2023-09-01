@@ -3,25 +3,25 @@ import { useSelector } from 'react-redux';
 
 const FilteredRockets = () => {
   const rockets = useSelector((state) => state.rockets.data);
-
   // Filter reserved rockets
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
-
   return (
-    <div className="profile-outer">
-      <h2>My Profile</h2>
-      <h3>Reserved Rockets:</h3>
-      <ul>
-        {reservedRockets.map((rocket) => (
-          <li key={rocket.id}>
-            {rocket.name}
-            {' '}
-            -
-            {rocket.type}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className="filtered-rockets">
+        <h2>My Rockets</h2>
+        {reservedRockets.length === 0 ? (
+          <div className="each-rocket-name">
+            No rockets reserved
+          </div>
+        ) : (
+          <div className="rocket-names">
+            {reservedRockets.map((rocket) => (
+              <div className="each-rocket-name" key={rocket.id}>{rocket.name}</div>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

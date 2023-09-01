@@ -10,7 +10,7 @@ const NavBar = () => {
     <nav>
       <div className="logo-name">
         <LogoImage />
-        <h1>Space Traveler&apos;s Hub</h1>
+        <p>Space Travelers&apos; Hub</p>
       </div>
       <ul className="nav-links">
         <li className="link">
@@ -19,6 +19,7 @@ const NavBar = () => {
         <li className="link">
           <NavLink to="/Missions" style={({ isActive }) => (isActive ? activeLink : undefined)}>Missions</NavLink>
         </li>
+        <span>|</span>
         <li className="link">
           <NavLink to="/MyProfile" style={({ isActive }) => (isActive ? activeLink : undefined)}>MyProfile</NavLink>
         </li>

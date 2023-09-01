@@ -1,25 +1,37 @@
 .rocket-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .rocket-card {
-  width: 300px;
-  margin: 10px;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .rocket-card img {
-  width: 100%;
-
-  /* height: auto; */
-  margin-bottom: 10px;
+  width: 250px;
 }
 
-.rocket-details {
-  font-size: 76px;
+.rocket-details h3 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.rocket-details p {
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.rocket-details button {
+  padding: 10px;
+  min-width: 150px;
+  font-size: 15px;
+  background-color: rgba(0, 68, 255, 0.684);
+  color: aliceblue;
+  border-radius: 7px;
 }
